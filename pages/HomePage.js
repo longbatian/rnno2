@@ -13,7 +13,7 @@ export default class App extends React.Component {
                 <Button
                     title="go to page1"
                     onPress={()=>{
-                        navigation.navigate('Page1')
+                        navigation.navigate('Page1',{name:'动态的title'})
                     }}
                 />
                 <Button
