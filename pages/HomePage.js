@@ -1,13 +1,27 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,Button } from 'react-native';
 
 export default class App extends React.Component {
+    static navigationOptions={
+        title:'Home'
+    }
     render() {
+        const {navigation}=this.props;
         return (
             <View style={styles.container}>
                 <Text style={styles.texts}>Move bricks... </Text>
-                <Text style={styles.texts}>Move bricks...2 </Text>
-
+                <Button
+                    title="go to page1"
+                    onPress={()=>{
+                        navigation.navigate('Page1')
+                    }}
+                />
+                <Button
+                    title="go to page2"
+                    onPress={()=>{
+                        navigation.navigate('Page2')
+                    }}
+                />
             </View>
         );
     }
